@@ -1,0 +1,126 @@
+{
+    "songData": [
+        {
+            "albumName": "活出生命LIVE演唱会",
+            "albumCoverMax": "images/hcsmlive.jpg",
+            "albumSong": [
+		{
+                    "musicName": "半城烟沙",
+                    "musicSinger": "许嵩",
+                    "musicLink": "music/118.mp3",
+                    "lyricsLink": "music/118.lrc",
+		            "musicTime": "04:52",
+                    "albumCoverMin": "music/hcsmlive.png"
+                },
+		{
+                    "musicName": "爱我别走",
+                    "musicSinger": "张震岳",
+                    "musicLink": "music/70581.mp3",
+                    "lyricsLink": "music/70581.lrc",
+		            "musicTime": "04:43",
+                    "albumCoverMin": "music/hcsmlive.png"
+                },
+		{
+                    "musicName": "情人 (原唱：Beyond)",
+                    "musicSinger": "张学友",
+                    "musicLink": "music/th.ogg",
+                    "lyricsLink": "music/118.lrc",
+		            "musicTime": "07:49",
+                    "albumCoverMin": "music/hcsmlive.png"
+                },
+		{
+                    "musicName": "爱我别走 (原唱：张震岳)",
+                    "musicSinger": "张学友",
+                    "musicLink": "music/th.ogg",
+                    "lyricsLink": "music/118.lrc",
+		            "musicTime": "05:14",
+                    "albumCoverMin": "music/hcsmlive.png"
+                }
+            ]
+        },
+        {
+            "albumName": "Glass Cloud",
+            "albumCoverMax": "images/Maria.jpg",
+            "albumSong": [
+                {
+                    "musicName": "梦见铁达尼",
+                    "musicSinger": "张惠妹",
+                    "musicLink": "music/th.ogg",
+                    "lyricsLink": "music/118.lrc",
+                    "musicTime": "04:36",
+                    "albumCoverMin": "music/Maria.jpg"
+                },
+                {
+                    "musicName": "很难",
+                    "musicSinger": "张震岳",
+                    "musicLink": "music/th.ogg",
+                    "lyricsLink": "music/118.lrc",
+                    "musicTime": "04:18",
+                    "albumCoverMin": "music/Maria.jpg"
+                }
+            ]
+        },
+        {
+            "albumName": "Pearl Harbor",
+            "albumCoverMax": "images/zzg.jpg",
+            "albumSong": [
+                {
+                    "musicName": "There You'll Be",
+                    "musicSinger": "Faith Hill",
+                    "musicLink": "music/There_You'll_th.ogg",
+                    "lyricsLink": "",
+                    "musicTime": "03:41",
+                    "albumCoverMin": "music/zzg.jpg"
+                },
+                {
+                    "musicName": "Tennessee",
+                    "musicSinger": "Faith Hill",
+                    "musicLink": "music/tennth.ogg",
+                    "lyricsLink": "",
+                    "musicTime": "03:40",
+                    "albumCoverMin": "music/zzg.jpg"
+                },
+                {
+                    "musicName": "Brothers",
+                    "musicSinger": "Faith Hill",
+                    "musicLink": "music/Broth.ogg",
+                    "lyricsLink": "",
+                    "musicTime": "04:04",
+                    "albumCoverMin": "music/zzg.jpg"
+                },
+                {
+                    "musicName": "And Then I Kissed Him",
+                    "musicSinger": "Faith Hill",
+                    "musicLink": "music/And_Then_I_Kissed_th.ogg",
+                    "lyricsLink": "",
+                    "musicTime": "05:36",
+                    "albumCoverMin": "music/zzg.jpg"
+                }
+            ]
+        },
+	{
+            "albumName": "Missy Higgins",
+            "albumCoverMax": "images/Vincent.jpg",
+            "albumSong": [
+                {
+                    "musicName": "Maria",
+                    "musicSinger": "Faith Hill",
+                    "musicLink": "music/th.ogg",
+                    "lyricsLink": "",
+		            "musicTime": "02:06",
+                    "albumCoverMin": "music/Vincent.jpg"
+                },
+		{
+                    "musicName": "Vincent",
+                    "musicSinger": "roberto vecchioni",
+                    "musicLink": "music/Vith.ogg",
+                    "lyricsLink": "",
+		            "musicTime": "03:07",
+                    "albumCoverMin": "music/Vincent.jpg"
+                }
+            ]
+        }
+
+    ],
+    "songNum": 12
+}

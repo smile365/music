@@ -1,0 +1,116 @@
+<!DOCTYPE>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>musicPlayer</title>
+<link type="text/css" rel="stylesheet" href="style/music-player.css">
+<style type="text/css">
+.page-info { padding:8px 15px; background:#fcea9e; border-bottom:1px solid #b6bac0; font:normal 16px Georgia; }
+.page-info h1 { float:left; }
+.page-info a { font-weight:bold; color:#222; }
+.return-article { float:right; }
+.return-article h2{ display:inline; }
+.main{ padding:20px; height:1000px; color:#444; }
+.wrap{ float:right; padding:15px; background:#FFFFE1; border:1px solid paleGoldenrod; border-radius:4px; }
+.f-list{ padding:20px 0; line-height:36px; font-size:14px; font-weight:bold; }
+.f-list a{ margin:0 5px 0 0; padding:0 10px 0 0; background:url(http://www.feelcss.com/wp-content/themes/fengchao/images/external_link.png) no-repeat scroll right top transparent; color:#006600; text-decoration:none; }
+.f-list a:hover{ text-decoration:underline; }
+cite{ display:block; }
+</style>
+</head>
+<body>
+<div class="page-info clearfix">
+  <h1><a href="http://218.195.250.199:8080/test" title="回到music首页">随便听听</a></h1>
+</div>
+<div class="main">
+<div class="wrap">
+  <cite>*忽然想听歌了，感谢Hey@feelcss的设计，参照他的设计搭建了一个网络音乐播放器</cite>
+  <cite>*带宽小，歌曲加载可能会慢，请谅解</cite>
+  <cite>*最佳浏览器: chrome 19+ </cite>
+	
+  <ul class="f-list">
+    <li><a href="#" title="功能说明" target="_blank">1.功能设计</a></li>
+    <li><a href="#" title="基本的控制（播放，暂停，上一曲，下一曲）" target="_blank">2.基本的控制（播放，暂停，上一曲，下一曲）</a></li>
+    <li><a href="#" title="播放进度，时间显示以及音量的调节" target="_blank">3.播放进度，时间显示以及音量的调节</a></li>
+    <li><a href="#" title="播放列表与播放方式（列表循环，单曲循环，随机播放，顺序播放）" target="_blank">4.播放列表与播放方式（列表循环，单曲循环，随机播放，顺序播放）</a></li>
+    <li><a href="#" title="同步显示歌词" target="_blank">5.同步显示歌词</a></li>
+	<li><a href="http://www.feelcss.com/html5-music-player-design.html" title="看看原作者吧" target="_blank">6.喜欢的话你也可以去看看他【Hey@feelcss】的设计说明</a></li>
+  </ul>
+</div>
+</div>
+
+<!--播放器开始 { -->
+<div id="musicPlayerWrap" class="m-player-wrap">
+  <div id="musicPlayer" class="m-player">
+    <div id="musicInfo" class="m-info">
+      <img src="images/album.png" alt="" id="albumFrontCover" class="album-front-cover">
+      <div class="front-cover-mask" title=""></div>
+      <div id="infoWrap" class="info-wrap">
+        <dl>
+          <dt id="musicName" title="FeelPlayer">FeelPlayer</dt>
+          <dd id="musicSinger" title="播放最爱的音乐">播放最爱的音乐</dd>
+          <dd id="albumName" title=""></dd>
+        </dl>
+
+        <div id="musicFunction" class="m-function clearfix">
+          <a id="albumLists" class="album-lists" title="打开专辑列表"></a>
+          <a id="lyrics" class="lyrics" title="打开歌词"></a>
+          <a id="favorites" class="favorites" title="打开收藏夹"></a>
+        </div>
+      </div>
+    </div>
+    <div id="broadcastControl" class="broadcast-control clearfix">
+      <div class="broadcast-control-l"></div>
+      <div class="broadcast-control-m">
+        <a id="play" class="m-play" title="播放"></a>
+        <a id="pause" class="m-pause hidden" title="暂停"></a>
+        <a id="next" class="m-next" title="下一曲"></a>
+        <a id="prev" class="m-prev" title="上一曲"></a>
+
+        <div class="play-progress-rate">
+          <span id="playTime" class="play-time">0:00</span>
+          <div id="progressRateBg" class="progress-rate-bg">
+            <div id="progressRateColor" class="progress-rate-color" style="width:0;"></div>
+          </div>
+          <span id="surplusTime" class="surplus-time">-0:00</span>
+        </div>
+
+        <a id="nowVolume" class="volume volume-active now-volume"></a>
+        <a id="nowMute" class="mute mute-active now-volume hidden"></a>
+        <a id="nowPlayManner" class="now-manner list-cycle list-cycle-active" title="列表循环"></a>
+
+        <div id="volumeControl" class="volume-wrap hidden">
+          <a id="volume" class="volume" title="点击设为静音"></a>
+          <a id="mute" class="mute hidden" title="点击开启声音"></a>
+          <div id="volumeSizeBg" class="volume-size-bg" title="音量调节">
+            <div id="volumeSizeColor" class="volume-size-color" data-volume="" data-height="" style="height:0;"></div>
+          </div>
+        </div>
+
+        <div id="playMannerControl" class="play-manner-wrap hidden">
+          <a id="orderPlay" class="order-play" title="顺序播放"></a>
+          <a id="shufflePlay" class="shuffle-play" title="随机播放"></a>
+          <a id="singleCycle" class="single-cycle" title="单曲循环"></a>
+          <a id="listCycle" class="list-cycle" title="列表循环"></a>
+        </div>
+
+      </div>
+      <div class="broadcast-control-r"></div>
+    </div>
+  </div>
+  <div id="musicPlayerSwitch" class="m-player-switch on" title="打开播放器">
+    <a id="playerSwitchBtn" class="switch-on"></a>
+  </div>
+
+  <div id="lrcWrap" class="lrc-wrap hidden">
+    <div id="loadLrc" class="load-lrc hidden">歌曲载入中...</div>
+    <div id="lrcBox" class="lrc-box"></div>
+  </div>
+</div>
+
+  
+
+<!--播放器结束 } -->
+</body>
+</html>
+<script type="text/javascript" src="javascript/musicPlayer.js"></script>

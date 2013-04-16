@@ -1,0 +1,86 @@
+<html>
+ <head>
+	 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	 <meta charset="utf-8">
+	 <title>musicPlayer</title>
+	 <script type="text/javascript" src="musicPlayer.js"></script>
+	 <link rel="stylesheet" type="text/css" href="music-player.css" />
+	 <link type="text/css" rel="stylesheet" href="chrome-extension://cpngackimfmofbokmjmljamhdncknpmg/style.css">
+	 <script type="text/javascript" charset="utf-8" src="chrome-extension://cpngackimfmofbokmjmljamhdncknpmg/page_context.js"></script>
+ </head>
+ <body>
+	<!--播放器开始 { -->
+<div id="musicPlayerWrap" class="m-player-wrap" style="left: 0px;">
+    <div id="musicPlayer" class="m-player">
+        <div id="musicInfo" class="m-info">
+            <img id="albumFrontCover" class="album-front-cover">
+            <div class="front-cover-mask" ></div>
+            <div id="infoWrap" class="info-wrap">
+                <dl>
+                    <dt id="musicName" ></dt>
+                    <dd id="musicSinger"></dd>
+                    <dd id="albumName"></dd>
+                </dl>
+                <div id="musicFunction" class="m-function clearfix">
+                    <a  id="albumLists" class="album-lists album-lists-hover" title="关闭专辑列表"></a>
+                    <a  id="lyrics" class="lyrics lyrics-hover" title="关闭歌词"></a>
+                    <a  id="favorites" class="favorites" title="打开收藏夹"> </a>
+                </div>
+            </div>
+        </div>
+        <div id="broadcastControl" class="broadcast-control clearfix">
+            <div class="broadcast-control-l"></div>
+            <div class="broadcast-control-m">
+                <a  id="play" class="m-play" title="播放"></a>
+                <a  id="pause" class="m-pause hidden" title="暂停"></a>
+                <a  id="next" class="m-next" title="下一曲"></a>
+                <a  id="prev" class="m-prev" title="上一曲"></a>
+                <div class="play-progress-rate">
+                    <span id="playTime" class="play-time"></span>
+                    <div id="progressRateBg" class="progress-rate-bg">
+                        <div id="progressRateColor" class="progress-rate-color" ></div>
+                    </div>
+                    <span id="surplusTime" class="surplus-time"></span>
+                </div>
+                <a  id="nowVolume" class="volume volume-active now-volume"></a>
+                <a  id="nowMute" class="mute mute-active now-volume hidden"></a>
+                <a  id="nowPlayManner" class="now-manner list-cycle list-cycle-active" title="列表循环"> </a>
+                <div id="volumeControl" class="volume-wrap hidden">
+                    <a  id="volume" class="volume" title="点击设为静音"> </a>
+                    <a  id="mute" class="mute hidden" title="点击开启声音"> </a>
+                    <div id="volumeSizeBg" class="volume-size-bg" title="音量调节">
+                        <div id="volumeSizeColor" class="volume-size-color"></div>
+                    </div>
+                </div>
+                <div id="playMannerControl" class="play-manner-wrap hidden">
+                    <a  id="orderPlay" class="order-play" title="顺序播放"></a>
+                    <a  id="shufflePlay" class="shuffle-play" title="随机播放"> </a>
+                    <a  id="singleCycle" class="single-cycle" title="单曲循环"></a>
+                    <a  id="listCycle" class="list-cycle" title="列表循环"></a>
+                </div>
+            </div>
+            <div class="broadcast-control-r"> </div>
+        </div>
+    </div>
+    <div id="musicPlayerSwitch" class="m-player-switch on" title="隐藏播放器" >
+        <a  id="playerSwitchBtn" class="switch-on">
+        </a>
+    </div>
+    <div id="lrcWrap" class="lrc-wrap">
+        <div id="loadLrc" >歌曲载入中...</div>
+        <div id="lrcBox" class="lrc-box"></div>
+		<audio id="musicEngine"></audio>
+    </div>
+<!--播放器结束 } -->
+<div id="musicList" class="music-list">
+    <div class="list-title">
+        <strong id="listName"></strong>
+        <span id="cutoverList" class="cutover-list">查看全部歌曲</span>
+        <div id="closeList" class="close-list" title="关闭列表"></div>
+    </div>
+    <ul id="listWrap" class="list-wrap album" data-temp=""></ul>
+</div>
+
+ </body>
+
+ </html>
